@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+
+</h:head>
+<h:body>
+    <ui:composition template="/layouts/default.xhtml">
+        <h:outputStylesheet library="styles" value="register.css"  target="head"/>
+
+        <ui:define name="view">
+            <b:row>
+                <b:column colMd="4" offsetMd="4">
+                    <div class="registerSection">
+                        <b:form>
+                            <b:messages/>
+                            <b:inputText placeholder="Username" value="#{registerFormModel.username}"/>
+                            <b:commandButton look="primary" actionListener="#{registerController.addNewUser}" value="Add"/>
+                        </b:form>
+
+                    </div>
+
+                </b:column>
+            </b:row>
+        </ui:define>
+    </ui:composition>
+</h:body>
+
+
+</html>

@@ -1,1 +1,30 @@
-index.xhtml
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+    <h:outputStylesheet library="themes" name="default/bootstrap.min.css" />
+    <h:outputStylesheet library="themes" name="default/theme.css" />
+    <style>
+        .panel{
+            margin-top: 3em;
+        }
+    </style>
+</h:head>
+<h:body>
+    <b:container>
+        <b:row>
+            <b:column colMd="4" offsetMd="4">
+                <b:panel styleClass="panel">
+                    <h3>Welcome</h3>
+                    <b:listLinks>
+                        <b:form>
+                            <h:commandLink action="pages/register.xhtml" value="Add new user" />
+                        </b:form>
+                    </b:listLinks>
+                </b:panel>
+
+            </b:column>
+        </b:row>
+
+    </b:container>
+</h:body>
+</html>
